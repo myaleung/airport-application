@@ -32,11 +32,11 @@ Available on Miro board at https://miro.com/app/board/uXjVKSYJDag=/?share_link_i
 <br>**Domain Model**
 | Objects | Properties | Messages | Output |
 | ------- | ---------- | -------- | ------ |
-| Airport  | airportCapacity @Integer <br>airportPlanes @Array[@Item]      | increaseAirportCapacityTo(@Integer)   | @Void  |
+| Airport  | airportCapacity @Integer <br>airportPlanes @Array[@Item]      | changeAirportCapacityTo(@Integer)   | @Void  |
 
 **Test Plan**
-- [ ] Increase the airportCapacity to the number passed through by increaseAirportCapacityTo
-- [ ] airportCapacity should not decrease passed the amount of planes currently at airport
+- [ ] Change the airportCapacity to the number passed through by changeAirportCapacityTo
+- [ ] airportCapacity should not decrease pass the amount of planes currently at airport
 
 ### User Story 4
 **User Story**

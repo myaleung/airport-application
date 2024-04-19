@@ -87,13 +87,13 @@ console.log(`==================`);
 afterEach();
 
 // ## User Story 3 Test 3.1 ##
-//* Increase the airportCapacity to the number passed through by increaseAirportCapacityTo
+//* Change the airportCapacity to the number passed through by changeAirportCapacityTo
 // Arrange
 testAmount = 13;
 expected = true;
 
 // Act
-actual = dfAirport.increaseAirportCapacityTo(testAmount);
+actual = dfAirport.changeAirportCapacityTo(testAmount);
 
 // Assert
 result = assertEquals(actual, expected);
@@ -101,7 +101,34 @@ result = assertEquals(actual, expected);
 //report
 console.log(`Test 3.1`);
 console.log(`==================`);
-console.log("Increase the airportCapacity to the number passed through by increaseAirportCapacityTo");
+console.log("Change the airportCapacity to the number passed through by changeAirportCapacityTo");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
+
+// ## User Story 3 Test 3.2 ##
+//* airportCapacity should not decrease pass the amount of planes currently at airport
+// Arrange
+testAmount = 3;
+// Add 5 planes to airport
+for (let i = 0; dfAirport.airportPlanes.length < 5; i++) {
+  dfAirport.airportPlanes.push(`Plane${[i]}`);
+}
+expected = false;
+
+// Act
+actual = dfAirport.changeAirportCapacityTo(testAmount);
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 3.1`);
+console.log(`==================`);
+console.log("airportCapacity should not decrease pass the amount of planes currently at airport");
 console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
 console.log(`==================`);

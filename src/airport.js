@@ -10,9 +10,12 @@ class airport {
         return this.airportCapacity;
     }
 
-    increaseAirportCapacityTo(amount) {
-        this.airportCapacity = amount;
-        return true;
+    changeAirportCapacityTo(amount) {
+        if (this.airportPlanes.length <= amount) { 
+            this.airportCapacity = amount;
+            return true;
+        }
+        return false;
     }
 
     //Check to see if airport has reached maximum amount of planes allowed
