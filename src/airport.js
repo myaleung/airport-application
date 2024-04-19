@@ -10,6 +10,11 @@ class airport {
         return this.airportCapacity;
     }
 
+    increaseAirportCapacityTo(amount) {
+        this.airportCapacity = amount;
+        return true;
+    }
+
     //Check to see if airport has reached maximum amount of planes allowed
     isAirportFull() {
         if (this.airportPlanes.length >= this.airportCapacity) { 
@@ -17,6 +22,7 @@ class airport {
         }
         return false;
     }
+    
 };
 
 export default airport;
