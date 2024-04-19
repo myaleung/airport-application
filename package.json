@@ -4,6 +4,10 @@
   "description": "Challenge 1 - The Airport Challenge",
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digital-futures-academy-se-2404-a/challenge-1-airport-myaleung.git"
+  },
   "directories": {
     "doc": "docs"
   },
@@ -11,6 +15,6 @@
     "start": "node src/index.js",
     "test": "node specRunner.js"
   },
-  "author": "",
+  "author": "Amy Leung",
   "license": "ISC"
 }
