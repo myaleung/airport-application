@@ -185,3 +185,26 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 3 Test 4.3 ##
+//* Test that plane passed to landPlane is actually added to the airport
+// Arrange
+expected = ['Plane 1'].toString();
+
+// Act
+dfAirport.landPlane('Plane 1');
+actual = dfAirport.airportPlanes.toString();
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 4.3`);
+console.log(`==================`);
+console.log("Test that plane passed to landPlane is actually added to the airport");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
