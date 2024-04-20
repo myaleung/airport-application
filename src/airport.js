@@ -48,6 +48,11 @@ class airport {
     planeExistsInAirport(planeId) { 
         return this.airportPlanes.includes(planeId);
     }
+
+    //Show list of planes currently at the airportPlanes array
+    planesAtAirport() { 
+        return this.airportPlanes;
+    }
 };
 
 export default airport;

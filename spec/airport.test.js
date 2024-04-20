@@ -379,3 +379,30 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 7 Test 7 ##
+//* planesAtAirport returns correct array of planes at airport
+// Arrange
+expected = ['Plane 1','Plane 3','Plane 4'].toString();;
+dfAirport.landPlane('Plane 1');
+dfAirport.landPlane('Plane 2');
+dfAirport.landPlane('Plane 3');
+dfAirport.landPlane('Plane 4');
+
+// Act
+dfAirport.takeOffPlane('Plane 2');
+actual = dfAirport.planesAtAirport().toString();
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 7`);
+console.log(`==================`);
+console.log("planesAtAirport returns correct array of planes at airport");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();

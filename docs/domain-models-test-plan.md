@@ -91,7 +91,4 @@ Available on Miro board at https://miro.com/app/board/uXjVKSYJDag=/?share_link_i
 | Plane  | id @String      |        |       |
 
 **Test Plan**
-- [ ] Add new plane to airportPlanes when landPlane is called
-- [ ] Check planesAtAirport returns correct array of planes at airport and has added plane to list.
-- [ ] Remove plane from airportPlanes when takeOffPlane is called
-- [ ] Check planesAtAirport returns correct array of planes at airport and has removed plane to list.
+- [ ] planesAtAirport returns correct array of planes at airport.
