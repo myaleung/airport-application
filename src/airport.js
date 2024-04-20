@@ -33,6 +33,12 @@ class airport {
             this.airportPlanes.push(planeId);
         }
     }
+
+    //Remove plane from airport if it exists at the airport
+    takeOffPlane(planeId) {
+        const plane = this.airportPlanes.indexOf(planeId);
+        this.airportPlanes.splice(plane, 1);
+    }
 };
 
 export default airport;

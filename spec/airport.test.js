@@ -256,3 +256,28 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 5 Test 5.1 ##
+//* Remove plane from airport and reduce airportPlanes length by 1
+// Arrange
+expected = 1;
+dfAirport.landPlane('Plane 1');
+dfAirport.landPlane('Plane 2');
+
+// Act
+dfAirport.takeOffPlane('Plane 1');
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 5.1`);
+console.log(`==================`);
+console.log("Remove plane from airport and reduce airportPlanes length by 1");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
