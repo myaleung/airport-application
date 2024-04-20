@@ -135,3 +135,27 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 3 Test 4.1 ##
+//* Add plane to airportPlanes using landPlane and expect array (airportPlanes) has increased in length by 1
+// Arrange
+expected = 1;
+
+// Act
+dfAirport.landPlane('Plane 1');
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 4.1`);
+console.log(`==================`);
+console.log("Add plane to airportPlanes using landPlane and expect array (airportPlanes) has increased in length by 1");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(dfAirport.airportPlanes);
+console.log(`==================`);
+
+// Clean Up
+afterEach();

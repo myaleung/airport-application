@@ -26,6 +26,12 @@ class airport {
         return false;
     }
     
+    //Add plane to airport if capacity isn't full
+    landPlane(planeId) { 
+        if (this.airportPlanes.length <= this.airportCapacity) { 
+            this.airportPlanes.push(planeId);
+        }
+    }
 };
 
 export default airport;

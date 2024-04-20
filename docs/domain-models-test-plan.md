@@ -48,8 +48,6 @@ Available on Miro board at https://miro.com/app/board/uXjVKSYJDag=/?share_link_i
 | Plane  | id @String      |        |       |
 
 **Test Plan**
-- [ ] isAirportFull returns false when airport is not full
-- [ ] isAirportFull returns true when airport is full
 - [ ] Add plane to airportPlanes using landPlane and expect array (airportPlanes) has increased in length by 1 when airport isn't full
 - [ ] airportPlanes should not increase by 1 if airport is full
 - [ ] Test that plane passed to landPlane is actually added to the airportPlanes
