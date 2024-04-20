@@ -233,3 +233,26 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 4 Test 4.5 ##
+//* Plane of null is not added to the airport
+// Arrange
+expected = 0;
+
+// Act
+dfAirport.landPlane(null);
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 4.5`);
+console.log(`==================`);
+console.log("Plane of null is not added to the airport");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
