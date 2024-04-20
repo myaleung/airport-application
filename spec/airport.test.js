@@ -330,3 +330,27 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 6 Test 6.2 ##
+//* Check if planeExistsInAirport returns false if plane is not at airport
+// Arrange
+expected = false;
+dfAirport.landPlane('Plane 1');
+dfAirport.landPlane('Plane 2');
+
+// Act
+actual = dfAirport.planeExistsInAirport('Plane 3');
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 6.2`);
+console.log(`==================`);
+console.log("Check if planeExistsInAirport returns false if plane is not at airport");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
