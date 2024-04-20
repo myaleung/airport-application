@@ -41,6 +41,11 @@ class airport {
             this.airportPlanes.splice(plane, 1);
         }
     }
+
+    //Check if plane exists in airportPlanes array
+    planeExistsInAirport(planeId) { 
+        return this.airportPlanes.includes(planeId);
+    }
 };
 
 export default airport;
