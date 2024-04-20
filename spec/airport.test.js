@@ -154,7 +154,33 @@ console.log(`==================`);
 console.log("Add plane to airportPlanes using landPlane and expect array (airportPlanes) has increased in length by 1");
 console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
-console.log(dfAirport.airportPlanes);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
+
+// ## User Story 3 Test 4.2 ##
+//* airportPlanes length should not increase by 1 if airport is full
+// Arrange
+expected = 10;
+// Add 10 planes to airport which would make it full
+for (let i = 0; dfAirport.airportPlanes.length < 10; i++) {
+  dfAirport.landPlane(`Plane ${[i]}`);
+}
+
+// Act
+dfAirport.landPlane('Plane 11');
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 4.2`);
+console.log(`==================`);
+console.log("airportPlanes length should not increase by 1 if airport is full");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
 console.log(`==================`);
 
 // Clean Up

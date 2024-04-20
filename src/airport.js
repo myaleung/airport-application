@@ -28,7 +28,7 @@ class airport {
     
     //Add plane to airport if capacity isn't full
     landPlane(planeId) { 
-        if (this.airportPlanes.length <= this.airportCapacity) { 
+        if (this.airportPlanes.length < this.airportCapacity) { 
             this.airportPlanes.push(planeId);
         }
     }

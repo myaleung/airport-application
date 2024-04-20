@@ -49,7 +49,7 @@ Available on Miro board at https://miro.com/app/board/uXjVKSYJDag=/?share_link_i
 
 **Test Plan**
 - [ ] Add plane to airportPlanes using landPlane and expect array (airportPlanes) has increased in length by 1 when airport isn't full
-- [ ] airportPlanes should not increase by 1 if airport is full
+- [ ] airportPlanes length should not increase by 1 if airport is full
 - [ ] Test that plane passed to landPlane is actually added to the airportPlanes
 - [ ] You are able to land a plane with other planes at airport
 - [ ] Plane of null is not added to the airport
