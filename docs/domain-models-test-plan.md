@@ -79,6 +79,7 @@ Available on Miro board at https://miro.com/app/board/uXjVKSYJDag=/?share_link_i
 **Test Plan**
 - [ ] Check if planeExistsInAirport returns true if plane is currently at airport
 - [ ] Check if planeExistsInAirport returns false if plane is not at airport
+- [ ] If planeExistsInAirport returns true, don't land the plane
 
 ### User Story 7
 **User Story**
