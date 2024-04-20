@@ -136,7 +136,7 @@ console.log(`==================`);
 // Clean Up
 afterEach();
 
-// ## User Story 3 Test 4.1 ##
+// ## User Story 4 Test 4.1 ##
 //* Add plane to airportPlanes using landPlane and expect array (airportPlanes) has increased in length by 1
 // Arrange
 expected = 1;
@@ -159,7 +159,7 @@ console.log(`==================`);
 // Clean Up
 afterEach();
 
-// ## User Story 3 Test 4.2 ##
+// ## User Story 4 Test 4.2 ##
 //* airportPlanes length should not increase by 1 if airport is full
 // Arrange
 expected = 10;
@@ -186,7 +186,7 @@ console.log(`==================`);
 // Clean Up
 afterEach();
 
-// ## User Story 3 Test 4.3 ##
+// ## User Story 4 Test 4.3 ##
 //* Test that plane passed to landPlane is actually added to the airport
 // Arrange
 expected = ['Plane 1'].toString();
@@ -202,6 +202,31 @@ result = assertEquals(actual, expected);
 console.log(`Test 4.3`);
 console.log(`==================`);
 console.log("Test that plane passed to landPlane is actually added to the airport");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
+
+// ## User Story 4 Test 4.4 ##
+//* You are able to land a plane with other planes at airport
+// Arrange
+expected = 2;
+// Add a plane to airport so it isn't empty
+dfAirport.landPlane('Plane 1');
+
+// Act
+dfAirport.landPlane('Plane 11');
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 4.4`);
+console.log(`==================`);
+console.log("You are able to land a plane with other planes at airport");
 console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
 console.log(`==================`);
