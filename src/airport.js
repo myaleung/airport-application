@@ -37,7 +37,9 @@ class airport {
     //Remove plane from airport if it exists at the airport
     takeOffPlane(planeId) {
         const plane = this.airportPlanes.indexOf(planeId);
-        this.airportPlanes.splice(plane, 1);
+        if (plane > -1) { 
+            this.airportPlanes.splice(plane, 1);
+        }
     }
 };
 

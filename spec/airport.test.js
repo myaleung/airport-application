@@ -281,3 +281,28 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 5 Test 5.2 ##
+//* Cannot remove a plane from airport that doesn't exist in airportPlanes array
+// Arrange
+expected = 2;
+dfAirport.landPlane('Plane 1');
+dfAirport.landPlane('Plane 2');
+
+// Act
+dfAirport.takeOffPlane('Plane 3');
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 5.2`);
+console.log(`==================`);
+console.log("Cannot remove a plane from airport that doesn't exist in airportPlanes array");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
