@@ -5,7 +5,7 @@ import Weather from '../src/weather.js';
 // ## User Story 1 Test 1 ##
 //* Return maxCapacity of airport as 10
 // Arrange
-const dfAirport = new Airport;
+const dfAirport = new Airport("Digital Futures Airport");
 let expected = 10;
 let testAmount = 0;
 let actual, result;

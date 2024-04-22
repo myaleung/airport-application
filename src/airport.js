@@ -1,7 +1,7 @@
 import Weather from "./weather.js";
 class Airport {
-    constructor() {
-        this.name = "Digital Futures Airport";
+    constructor(name) {
+        this.name = name;
         this.airportCapacity = 10;
         this.airportPlanes = [];
         this.isStormy = Weather.isStormy;
