@@ -10,6 +10,7 @@ class airport {
         return this.airportCapacity;
     }
 
+    //update airportCapacity amount to new value passed in argument
     changeAirportCapacityTo(amount) {
         if (this.airportPlanes.length <= amount) { 
             this.airportCapacity = amount;
@@ -39,6 +40,7 @@ class airport {
     //Remove plane from airport if it exists at the airport
     takeOffPlane(planeId) {
         const plane = this.airportPlanes.indexOf(planeId);
+        
         if (plane > -1) { 
             this.airportPlanes.splice(plane, 1);
         }
