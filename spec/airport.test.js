@@ -505,3 +505,28 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 10 Test 10.2 ##
+//* If isStormy returns false, takeOffPlane should remove plane from airportPlanes
+// Arrange
+expected = 1;
+dfAirport.airportPlanes = ["Plane A", "Plane B"];
+dfAirport.isStormy = false;
+
+// Act
+dfAirport.takeOffPlane("Plane A");
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 10.2`);
+console.log(`==================`);
+console.log("If isStormy returns false, takeOffPlane should remove plane from airportPlanes");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
