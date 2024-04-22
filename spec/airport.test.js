@@ -1,10 +1,11 @@
+import Airport from '../src/airport.js';
 import { assertEquals } from './framework/test-framework.js';
-import airport from '../src/airport.js';
+import Weather from '../src/weather.js';
 
 // ## User Story 1 Test 1 ##
 //* Return maxCapacity of airport as 10
 // Arrange
-const dfAirport = new airport;
+const dfAirport = new Airport;
 let expected = 10;
 let testAmount = 0;
 let actual, result;
@@ -383,7 +384,7 @@ afterEach();
 // ## User Story 7 Test 7 ##
 //* planesAtAirport returns correct array of planes at airport
 // Arrange
-expected = ['Plane 1','Plane 3','Plane 4'].toString();;
+expected = ['Plane 1','Plane 3','Plane 4'].toString();
 dfAirport.landPlane('Plane 1');
 dfAirport.landPlane('Plane 2');
 dfAirport.landPlane('Plane 3');
@@ -400,6 +401,29 @@ result = assertEquals(actual, expected);
 console.log(`Test 7`);
 console.log(`==================`);
 console.log("planesAtAirport returns correct array of planes at airport");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();
+
+// ## User Story 8 Test 8.1 ##
+//* Check if weather isStormy returns a boolean for each scenario
+// Arrange
+let weather = new Weather;
+expected = typeof(true);
+
+// Act
+actual = typeof(weather.isStormy());
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 8.1`);
+console.log(`==================`);
+console.log("Check if weather isStormy returns a boolean for each scenario");
 console.log(result ? `Pass` : `Fail`);
 !result && console.log(`Expected: ${expected}; Actual: ${actual}`);
 console.log(`==================`);

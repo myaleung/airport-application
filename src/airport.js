@@ -1,4 +1,4 @@
-class airport {
+class Airport {
     constructor() {
         this.name = "Digital Futures Airport";
         this.airportCapacity = 10;
@@ -40,7 +40,7 @@ class airport {
     //Remove plane from airport if it exists at the airport
     takeOffPlane(planeId) {
         const plane = this.airportPlanes.indexOf(planeId);
-        
+
         if (plane > -1) { 
             this.airportPlanes.splice(plane, 1);
         }
@@ -57,4 +57,4 @@ class airport {
     }
 };
 
-export default airport;
+export default Airport;
