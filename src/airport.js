@@ -43,7 +43,7 @@ class Airport {
     takeOffPlane(planeId) {
         const plane = this.airportPlanes.indexOf(planeId);
 
-        if (plane > -1) { 
+        if (plane > -1 && !this.isStormy) { 
             this.airportPlanes.splice(plane, 1);
         }
     }
