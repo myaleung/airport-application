@@ -430,3 +430,28 @@ console.log(`==================`);
 
 // Clean Up
 afterEach();
+
+// ## User Story 9 Test 9.1 ##
+//* If isStormy returns true, landPlane should not add plane to airportPlanes
+// Arrange
+expected = 2;
+dfAirport.airportPlanes = ["Plane A", "Plane B"];
+dfAirport.isStormy = true;
+
+// Act
+dfAirport.landPlane("Plane C");
+actual = dfAirport.airportPlanes.length;
+
+// Assert
+result = assertEquals(actual, expected);
+
+//report
+console.log(`Test 9.1`);
+console.log(`==================`);
+console.log("If isStormy returns true, landPlane should not add plane to airportPlanes");
+console.log(result ? `Pass` : `Fail`);
+!result && console.log(`Expected: ${expected}; Actual: ${actual}`);
+console.log(`==================`);
+
+// Clean Up
+afterEach();

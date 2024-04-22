@@ -1,8 +1,10 @@
+import Weather from "./weather.js";
 class Airport {
     constructor() {
         this.name = "Digital Futures Airport";
         this.airportCapacity = 10;
         this.airportPlanes = [];
+        this.isStormy = Weather.isStormy;
     }
     
     //Get maximum number of planes airport can hold
@@ -30,7 +32,7 @@ class Airport {
     //Add plane to airport if capacity isn't full
     landPlane(planeId) { 
         if (planeId === null || planeId === undefined) return;
-        if (!this.planeExistsInAirport(planeId)) {
+        if (!this.planeExistsInAirport(planeId) && !this.isStormy) {
             if (this.airportPlanes.length < this.airportCapacity) { 
                 this.airportPlanes.push(planeId);
             }
