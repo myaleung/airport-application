@@ -4,7 +4,6 @@ class Airport {
         this.name = name;
         this.airportCapacity = 10;
         this.airportPlanes = [];
-        this.isStormy = Weather.isStormy;
     }
     
     //Get maximum number of planes airport can hold
@@ -30,20 +29,32 @@ class Airport {
     }
     
     //Add plane to airport if capacity isn't full
-    landPlane(planeId) { 
+    landPlane(planeId, weather) { 
+        let stormy;
+        
+        if (weather === undefined || weather === null) {
+            stormy = new Weather().isStormy()
+        } else { 
+            stormy = weather;
+        }
         if (planeId === null || planeId === undefined) return;
-        if (!this.planeExistsInAirport(planeId) && !this.isStormy) {
-            if (this.airportPlanes.length < this.airportCapacity) { 
-                this.airportPlanes.push(planeId);
-            }
+        if (this.planeExistsInAirport(planeId) || stormy) return;
+        if (this.airportPlanes.length < this.airportCapacity) {
+            this.airportPlanes.push(planeId);
         }
     }
 
     //Remove plane from airport if it exists at the airport
-    takeOffPlane(planeId) {
+    takeOffPlane(planeId, weather) {
         const plane = this.airportPlanes.indexOf(planeId);
-
-        if (plane > -1 && !this.isStormy) { 
+        let stormy;
+        
+        if (weather === undefined || weather === null) {
+            stormy = new Weather().isStormy()
+        } else { 
+            stormy = weather;
+        }
+        if (plane > -1 && !stormy) { 
             this.airportPlanes.splice(plane, 1);
         }
     }

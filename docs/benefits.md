@@ -12,4 +12,5 @@ The benefits this software will provide include,
 There are some potential risks to this software including,
 * Plane IDs are strings and don't have any validation to check for consistency nor case sensitivity. Therefore they may not match IDs in other software and the plane can be named anything.
 * The system doesn't account for different weather conditions or other possible disasters that may arise. It only accounts for stormy weather conditions.
-* We cannot land or take off multiple planes. Currently you can only prepare one plane for landing or take off.
+* We cannot land or take off multiple planes at the same time. Currently you can only prepare one plane for landing or take off in a queue.
+* Values in Airport class are accessible which may cause problems in the future.
