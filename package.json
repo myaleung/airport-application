@@ -16,5 +16,8 @@
     "test": "node specRunner.js"
   },
   "author": "Amy Leung",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
 }
