@@ -132,3 +132,8 @@ Available on Miro board at https://miro.com/app/board/uXjVKSYJDag=/?share_link_i
 **Test Plan**
 - [ ] If isStormy returns true, takeOffPlane should not remove plane from airportPlanes array
 - [ ] If isStormy returns false, takeOffPlane should remove plane from airportPlanes array
+
+
+## Kanban Board
+I used a kanban board on Miro, which I used to create the user stories on, to help monitor my progress and complete all tickets in my backlog.<br>
+![Kanban Board](image-13.png)
