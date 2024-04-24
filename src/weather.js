@@ -7,7 +7,7 @@ class Weather {
     weatherTypes() { 
         //Shuffle array
         for (let i = this.weatherList.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
+            const j = Math.floor(Math.random() * (i + 1));
             [this.weatherList[i], this.weatherList[j]] = [this.weatherList[j], this.weatherList[i]];
         }
         return this.weatherList[0];
