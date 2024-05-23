@@ -6,7 +6,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/digital-futures-academy-se-2404-a/challenge-1-airport-myaleung.git"
+    "url": "https://github.com/myaleung/airport-application"
   },
   "directories": {
     "doc": "docs"
